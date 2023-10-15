@@ -30,3 +30,15 @@
       - Create a new `.eslintrc.cjs` file
       - Create a new `.prettierrc.jso`n file
       - Run ESLint `npm run lint`
+2. **Users, Roles and Permissions**
+    - **Create Permissions Model:** `php artisan make:model Permission -ms`
+    - **Create Roles Model:**
+        ```
+            php artisan make:model Role -ms
+            php artisan make:migration create_permission_role_table
+            php artisan make:migration create_role_user_table
+        ```
+    - **Add Roles To User**
+    - **Add Admin User:** `php artisan make:seed UserSeeder`
+    - **Seed Database**
+    - **Register Auth Gates**
