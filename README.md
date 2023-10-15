@@ -61,3 +61,4 @@
     - **Edit Restaurant: Vue Component**
     - **Submit Form: Controller and Validation** `php artisan make:request Admin/UpdateRestaurantRequest`
     - **Display Success and Status Messages**
+7. **Front-end Permissions: Show/Hide Buttons**
