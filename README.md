@@ -62,3 +62,11 @@
     - **Submit Form: Controller and Validation** `php artisan make:request Admin/UpdateRestaurantRequest`
     - **Display Success and Status Messages**
 7. **Front-end Permissions: Show/Hide Buttons**
+8. **Category/Product DB and "Menu" Item**
+    - **Category/Product Database Structure**
+        ```
+            php artisan make:model Category -m
+            php artisan make:model Product -m
+        ```
+    - **Adding Category/Product to Permissions**
+    - **Menu item "Menu"** `php artisan make:controller Vendor/MenuController`
