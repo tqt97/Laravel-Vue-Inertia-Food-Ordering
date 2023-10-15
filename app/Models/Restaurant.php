@@ -10,7 +10,7 @@ class Restaurant extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['city_id', 'name', 'address'];
+    protected $fillable = ['owner_id','city_id', 'name', 'address'];
 
     public function owner(): BelongsTo
     {

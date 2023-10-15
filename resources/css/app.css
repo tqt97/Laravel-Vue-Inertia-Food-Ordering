@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .table {
+        @apply w-full;
+    }
+
+    .table thead th {
+        @apply text-left p-3 bg-gray-100;
+    }
+
+    .table tbody tr {
+        @apply even:bg-gray-50/50;
+    }
+
+    .table tbody td {
+        @apply p-3;
+    }
+
+    .badge {
+        @apply inline-flex text-sm rounded px-2 font-semibold border;
+    }
+
+    .badge-primary {
+        @apply bg-primary-50 text-primary-700 border-primary-300;
+    }
+
+    .text-link {
+        @apply text-blue-600 hover:underline;
+    }
+}

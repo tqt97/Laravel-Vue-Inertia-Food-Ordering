@@ -45,3 +45,7 @@
 3. **Restaurants DB Schema**
     - **Create a City Model** `php artisan make:model City -ms`
     - **Create a Restaurant Model** `php artisan make:model Restaurant -m`
+4. **Restaurants Index Table**
+    - **Seed Vendor Role**
+    - **Seed Vendor User**
+    - **Create Index View Restaurant** `php artisan make:controller Admin/RestaurantController`
