@@ -56,3 +56,8 @@
     - **Form Submit: Validation in Form Request** `php artisan make:request Admin/StoreRestaurantRequest`
     - **Store Method in Controller**
     - **Sending Email Invitation to Restaurant Owner** `php artisan make:notification RestaurantOwnerInvitation`
+6. **Edit Restaurant Form**
+    - **Edit method in Controller**
+    - **Edit Restaurant: Vue Component**
+    - **Submit Form: Controller and Validation** `php artisan make:request Admin/UpdateRestaurantRequest`
+    - **Display Success and Status Messages**

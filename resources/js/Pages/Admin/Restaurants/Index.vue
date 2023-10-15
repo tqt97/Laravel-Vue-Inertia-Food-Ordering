@@ -39,10 +39,11 @@ defineProps({
                                     <th>Address</th>
                                     <th>Owner Name</th>
                                     <th>Owner Email</th>
+                                    <th></th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr v-for="   restaurant    in    restaurants   "
+                                <tr v-for="     restaurant      in      restaurants     "
                                     :key=" restaurant.id ">
                                     <td>{{ restaurant.id }}</td>
                                     <td>{{ restaurant.name }}</td>
@@ -57,6 +58,13 @@ defineProps({
                                             class="text-link">{{
                                                 restaurant.owner.email
                                             }}</a>
+                                    </td>
+                                    <td>
+                                        <Link
+                                            :href=" route( 'admin.restaurants.edit', restaurant ) "
+                                            class="btn btn-secondary">
+                                        Edit
+                                        </Link>
                                     </td>
                                 </tr>
                             </tbody>

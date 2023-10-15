@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Enums\RoleName;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\StoreRestaurantRequest;
+use App\Http\Requests\Admin\UpdateRestaurantRequest;
 use App\Models\City;
 use App\Models\Restaurant;
 use App\Models\Role;
@@ -58,5 +59,31 @@ class RestaurantController extends Controller
         });
 
         return to_route('admin.restaurants.index');
+    }
+
+    public function edit(Restaurant $restaurant): Response
+    {
+        $this->authorize('restaurant.update');
+
+        $restaurant->load(['city', 'owner']);
+
+        return Inertia::render('Admin/Restaurants/Edit', [
+            'restaurant' => $restaurant,
+            'cities'     => City::get(['id', 'name']),
+        ]);
+    }
+
+    public function update(UpdateRestaurantRequest $request, Restaurant $restaurant): RedirectResponse
+    {
+        $validated = $request->validated();
+
+        $restaurant->update([
+            'city_id' => $validated['city'],
+            'name'    => $validated['restaurant_name'],
+            'address' => $validated['address'],
+        ]);
+
+        return to_route('admin.restaurants.index')
+            ->withStatus('Restaurant updated successfully.');
     }
 }
