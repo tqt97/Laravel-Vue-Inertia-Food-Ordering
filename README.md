@@ -49,3 +49,10 @@
     - **Seed Vendor Role**
     - **Seed Vendor User**
     - **Create Index View Restaurant** `php artisan make:controller Admin/RestaurantController`
+5. **Create Restaurant Form**
+    - **Create Method in Controller**
+    - **Restaurant Create View Component**
+    - **SelectInput Component**
+    - **Form Submit: Validation in Form Request** `php artisan make:request Admin/StoreRestaurantRequest`
+    - **Store Method in Controller**
+    - **Sending Email Invitation to Restaurant Owner** `php artisan make:notification RestaurantOwnerInvitation`

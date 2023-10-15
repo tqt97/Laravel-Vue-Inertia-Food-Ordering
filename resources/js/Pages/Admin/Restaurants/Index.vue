@@ -1,7 +1,7 @@
 <script setup>
 // @ts-ignore
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout.vue";
-import {Head} from '@inertiajs/vue3'
+import {Head, Link} from '@inertiajs/vue3'
 
 // @ts-ignore
 defineProps({
@@ -23,6 +23,12 @@ defineProps({
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                    <div class="p-6">
+                        <Link class="btn btn-primary"
+                            :href=" route( 'admin.restaurants.create' ) ">
+                        Add New Restaurant
+                        </Link>
+                    </div>
                     <div class="p-6 text-gray-900 overflow-x-scroll">
                         <table class="table">
                             <thead>
@@ -36,7 +42,7 @@ defineProps({
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr v-for="  restaurant   in   restaurants  "
+                                <tr v-for="   restaurant    in    restaurants   "
                                     :key=" restaurant.id ">
                                     <td>{{ restaurant.id }}</td>
                                     <td>{{ restaurant.name }}</td>
