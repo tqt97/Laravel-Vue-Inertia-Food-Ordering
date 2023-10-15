@@ -42,3 +42,6 @@
     - **Add Admin User:** `php artisan make:seed UserSeeder`
     - **Seed Database**
     - **Register Auth Gates**
+3. **Restaurants DB Schema**
+    - **Create a City Model** `php artisan make:model City -ms`
+    - **Create a Restaurant Model** `php artisan make:model Restaurant -m`
