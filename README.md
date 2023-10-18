@@ -70,3 +70,12 @@
         ```
     - **Adding Category/Product to Permissions**
     - **Menu item "Menu"** `php artisan make:controller Vendor/MenuController`
+9. **Categories Create/Edit/Delete**
+    ```
+        php artisan make:controller Vendor/CategoryController
+        php artisan make:controller Vendor/ProductController
+    ```
+    - **Category Create Form**
+    - **Save New Category**
+    - **Edit Category**
+    - **Delete Categories**
