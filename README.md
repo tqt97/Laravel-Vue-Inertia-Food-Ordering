@@ -79,3 +79,7 @@
     - **Save New Category**
     - **Edit Category**
     - **Delete Categories**
+10. **Products Create/Edit/Delete**
+    - **Product Create Form**
+    - **Save New Product**
+    - **Edit Product**
