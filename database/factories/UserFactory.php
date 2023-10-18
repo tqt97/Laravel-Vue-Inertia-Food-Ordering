@@ -2,6 +2,9 @@
 
 namespace Database\Factories;
 
+use App\Enums\RoleName;
+use App\Models\Role;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
@@ -34,5 +37,12 @@ class UserFactory extends Factory
         return $this->state(fn (array $attributes) => [
             'email_verified_at' => null,
         ]);
+    }
+
+    public function vendor()
+    {
+        return $this->afterCreating(function (User $user) {
+            $user->roles()->sync(Role::where('name', RoleName::VENDOR->value)->first());
+        });
     }
 }

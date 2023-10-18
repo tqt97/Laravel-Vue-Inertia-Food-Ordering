@@ -83,3 +83,7 @@
     - **Product Create Form**
     - **Save New Product**
     - **Edit Product**
+11. **Public Homepage and Restaurant Page**
+    - **Homepage View**
+    - **Seed More Restaurants With Categories And Products**
+    - **Restaurant View**
